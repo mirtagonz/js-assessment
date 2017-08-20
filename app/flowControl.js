@@ -2,6 +2,23 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.flowControlAnswers = {
   fizzBuzz: function(num) {
+    var result = '';
+
+    if(!isNaN(num) && num){
+      if(num%3===0){
+        result += 'fizz';
+      }
+      if(num%5===0){
+        result += 'buzz';
+      }  
+      if(result.length>0){
+        return result;
+      }else{
+        return num;
+      }
+    } else{
+      return false;
+    }
     // write a function that receives a number as its argument;
     // if the number is divisible by 3, the function should return 'fizz';
     // if the number is divisible by 5, the function should return 'buzz';
